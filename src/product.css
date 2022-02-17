@@ -1,0 +1,27 @@
+.products{
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.products__title {
+    text-transform: uppercase;
+}
+
+.products__container{
+    border: 2px solid #00e070;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.products__item{
+    width: 230px;
+    height: auto;
+    border: 2px solid #00e070;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 2px 3px #c3c3c3;
+    background-color:#10ff80;
+}
