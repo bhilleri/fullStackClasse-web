@@ -4,6 +4,7 @@ import Products from './components/Product';
 import { useEffect, useState } from 'react';
 import ProductList from './components/ProductList';
 import { getProducts } from './api/Product';
+import Header from './components/Header';
 
 function App() {
   //useState is used to save data
@@ -25,9 +26,7 @@ function validateUrl(url){
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>ESIEA | FullStack project</p>
-      </header>
+      <Header/>
       <main>
           <div className="products">
             <h2 className="products__title">Produits disponibles</h2>
