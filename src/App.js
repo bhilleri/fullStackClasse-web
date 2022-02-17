@@ -2,6 +2,8 @@ import './App.css';
 import './product.css'
 import Products from './components/Product';
 import { useEffect, useState } from 'react';
+import ProductList from './components/ProductList';
+import { getProducts } from './api/Product';
 
 function App() {
   //useState is used to save data
@@ -9,13 +11,10 @@ function App() {
   const [allCategoies, setAllCategories] = useState([])
   // useEffecct is used to interact w/ data outside of the react app
   // fetch products from the API and update products state
-  useEffect(()=>{
-    fetch("http://localhost:9000/api/private/product")
-    .then(res=>res.json())
-    .then(data => setAllProducts(data))
-    .catch(e => console.log(e.toString()))
-  },[]);
 
+  useEffect(()=>{
+    getProducts().then(response => setAllProducts(response))
+  },[]);
   console.log(allProducts);
 
   const sampleUrl = "ssh://via.placeholder.com/200/e9fff4"
@@ -32,8 +31,7 @@ function validateUrl(url){
       <main>
           <div className="products">
             <h2 className="products__title">Produits disponibles</h2>
-              <Products data={allProducts} validateUrl={validateUrl} url={sampleUrl}/>
-
+              <ProductList data={allProducts} validateUrl={validateUrl} url={sampleUrl}/>
           </div>
       </main>
     </div>
