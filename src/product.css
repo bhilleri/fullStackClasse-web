@@ -25,3 +25,8 @@
     box-shadow: 1px 2px 3px #c3c3c3;
     background-color:#10ff80;
 }
+
+.product__item--500{
+    border-color: #00FFFF;
+    background-color: #00FFFF;
+}

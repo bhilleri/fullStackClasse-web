@@ -6,7 +6,12 @@ import Products from './components/Product';
 
 function App() {
 
-    
+  const sampleUrl = "ssh://via.placeholder.com/200/e9fff4"
+  const dataSample = data;
+function validateUrl(url){
+  const parsed = new URL(url);
+  return ["https:", "http:"].includes(parsed.protocol);
+}
 
   return (
     <div className="App">
@@ -16,9 +21,7 @@ function App() {
       <main>
           <div className="products">
             <h2 className="products__title">Produits disponibles</h2>
-            <div className="products__container">
-              <Products/>
-            </div>
+              <Products data={dataSample} validateUrl={validateUrl} url={sampleUrl}/>
 
           </div>
       </main>
