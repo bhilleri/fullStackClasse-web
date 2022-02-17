@@ -2,6 +2,15 @@ import React from "react";
 
 class Products extends React.Component{
     
+
+    constructor(props){
+        super(props)
+        this.state = {
+            
+        }
+    }
+
+
     render(){
         const {data, url, validateUrl} = this.props;
         const productsElements = this.props.data.map(i => <div>
