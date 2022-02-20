@@ -32,7 +32,7 @@ class MainComponent extends React.Component{
         return(
         <div className="products">
             <h2 className="products__title">Produits disponibles</h2>
-            <ProductList data={this.state.allProduct} validateUrl={this.validateUrl} url={sampleUrl}/>
+            <ProductList data={this.state.allProduct} validateUrl={this.validateUrl} url={sampleUrl} getAndSetProducts={this.getAndSetProducts}/>
             <NewProduct getAndSetProducts={this.getAndSetProducts}/>
         </div>
         )
